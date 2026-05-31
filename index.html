@@ -1,24 +1,27 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8">
-<title>Surpresa 💖</title>
-<style>
-  body {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: #ffedf3;
-    font-family: Arial, sans-serif;
-    color: #d6336c;
-    text-align: center;
-    font-size: 26px;
-  }
-</style>
+    <title>Gerador de E-mails de Teste</title>
 </head>
 <body>
-  <div>💌 VOCÊ É A MELHOR NAMORADA DO MUNDO 💌</div>
+    <h1>Gerador de E-mails de Teste</h1>
+
+    <button onclick="gerar()">Gerar</button>
+
+    <p id="email"></p>
+
+    <script>
+        function gerar() {
+            const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+            let usuario = "";
+
+            for(let i = 0; i < 10; i++) {
+                usuario += chars[Math.floor(Math.random() * chars.length)];
+            }
+
+            document.getElementById("email").innerText =
+                usuario + "@teste.com";
+        }
+    </script>
 </body>
 </html>
